@@ -4,10 +4,145 @@
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>MP1</title>
+
     </head>
     <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+        <header>
+            <nav>
+                <ul>
+                    <li><a>AARTHY KESAVAN PADMANABAN</a></li>
+                    
+                    <li><a href="#about"> About </a></li>
+                    <li><a href="#work"> Experience </a></li>
+                    <li><a href="#project"> Projects </a></li>
+                    <li><a href="#education"> Education </a></li>
+                   
+                </ul>
+            </nav>
+        </header>
+        <section class="content">
+        <section class="about" id="about">
+            <h1 class="section_head"> About Me </h1>
+            <div class="picture_description"><video controls>
+                <source src="assets/video_tag.mov" type="video/mp4">
+            </video>
+            
+            <p>Hello, I'm Aarthy, a Master's in Computer Science student at University of Illinois Urbana-Champaign.
+
+                My previous experiences are with Wells Fargo (2021-2024) and Amazon (Summer 2025). At Wells Fargo, I developed internal applications that were crucial for the regulatory compliance of the bank. During my stint with Amazon, I developed an agentic workflow to improve advertiser experience.
+                
+                Currently, I am a Graduate Research Assistant at Xability Design Lab where I help improve user experience and learner experience for Blind and Low Vision users.
+                I am interested in software development and integrating AI/ ML into the development lifecycle.
+                I'm currently in the lookout of full times roles in Software Development Engineering from Spring 2026</p></div>
+            
+        </section>
+        
+        <section class="work" id="work">
+            <h1 class="section_head"> Work Experience </h1>
+             <div class="carousel">
+                <button class="prev " id="prev"><i class="fa fa-arrow-left"></i></button>
+                <div class="carousel-slide">
+                    <img class="carousel-image" src="assets/pexel1.jpg">
+                    <p class="carousel-caption">Graduate Research Assistant at Xability Design Lab </p>
+
+                </div>
+                <div class="carousel-slide">
+                    <img class="carousel-image" src="assets/pexel2.jpg">
+                    <p class="carousel-caption">Software Engineer Intern at Amazon </p>
+
+                </div>
+                <div class="carousel-slide">
+                    <img class="carousel-image" src="assets/pexel3.jpg">
+                    <p class="carousel-caption">Software Engineer Wells Fargo </p>
+
+                </div>
+                <div class="carousel-slide">
+                    <img class="carousel-image" src="assets/pexel4.jpg">
+                    <p class="carousel-caption">Research Intern at IISc Bengaluru </p>
+
+                </div>
+
+                
+                <button class="next" id="next"><i class="fa fa-arrow-right"></i></button>
+                <input type="radio" name="carousel_page" id="0" class="carousel-page" >
+                <input type="radio" name="carousel_page" id="1" class="carousel-page" >
+                <input type="radio" name="carousel_page" id="2" class="carousel-page" >
+                <input type="radio" name="carousel_page" id="3" class="carousel-page" >
+
+            </div> 
+            
+        </div>
+
+        </section>
+        <section class="project" id="project">
+            <dialog class="modal" id="modal_project">
+                <div class="modal_container">
+                    <p id="project_modal_description"> </p>
+                    <button id="close_modal" class="close_modal">Back</button>
+                </div>
+                
+            </dialog>
+            <h1 class="section_head">Projects</h1>
+            <h4 class="section_head">Click on the icons to know more</h4>
+            <div class="project-grid-container">
+           <div class="project-grid">
+            <div><i class="project-icon fa fa-group" id="project_1"></i></div>
+            <p><strong>GroupMate: A Role-Aware Team Formation System for Academic Collaboration</strong><br>
+                Team formation in educational environments often struggles to balance student interests, technical strengths, and project compatibility. We introduce GroupMate, an intelligent group recommendation system designed to automate and optimize team creation in academic settings. Leveraging a vision essay scoring model fine-tuned using arXiv abstracts and heuristics for novelty and originality, GroupMate classifies students into Visionaries, Collaborators, and Enablers. Our matching algorithm forms balanced teams by seeding groups with visionary students and incrementally filling roles based on skill complementarity and project fit.
+            </p>
+            
+           </div>
+           <div class="project-grid">
+            <div><i class="project-icon fa fa-video-camera" id="project_2"></i></div>
+            <p><strong>VINT: Accessible Video Interpreter (under Professor Jooyoung Seo)</strong><br>
+            Creating good quality accessible audio description for videos is a time and resource intensive process. Harnessing the power of Image understanding, VINT generates quality descriptions according to a catered set of accessibiloty guideleines. The generated audio description is converted to voice using TTS and baked into the video, ensuring that the events in the video, original audio and the audio description are synced. It provides other features like binaural audio and audio ducking in addition, to ensure maximum comprehension for blind and low vision users.
+            </p>
+           </div>
+           <div class="project-grid">
+            <div><i class="project-icon fa fa-frown-o" id="project_3"></i></div>
+            <p><strong>Dodging Detection: Evaluation of content-moderation models under adversarial evasion</strong><br>
+                Toxicity is widely spread on social media due to the space being widely un-moderated. Some platforms employ moderation using human moderators, but that becomes infeasible to scale with a huge user-base. Our work does an extensive critical evaluation on existing content moderation models to critique on their ability to detect adversarial attacks and evasion tactics. It also includes a user study to understand the major differences between human-moderation and AI-moderation. We include critical results that can enhance AI models in the content-moderation space and propose guidelines for the betterment of crowd-sourced datasets and developing content-moderation models.
+                </p>
+           </div>
+           <div class="project-grid">
+
+            <div><i class="project-icon fa fa-camera" id="project_4"></i></div>
+            
+            <p><strong>Bi-modal analysis of social media for flood-water level estimation using instance segmentation</strong><br>
+                We propose a novel approach to estimate the relevancy of posts with respect to flood before processing them further. Textual captions from social media posts can contain verbal descriptions of floods along with mentions of the location. Location is identified from text captions using named entity recognition. Depth information can be either directly stated with measurements or indirectly indicated using references which are identified for inferring depth in a location. The location metadata from social media posts is used for determining the location of the flooding event. The proposed flood nuggets extraction using relevant posts filtration (FERPF) algorithm devises a system to estimate flood water depth and location coordinates from the text captions and metadata from relevant social media posts filtered.
+                </p>
+           </div>
+        </div>
+        </section>
+        <section class="education" id="education">
+            <h1 class="section_head">Education</h1>
+            <p>After finishing high school, I did my undergrad in <strong>College of Engineering Guindy, Chennai</strong> which is the oldest technical institution in India. Alongside technical education, I also got to work on my social, communication and leadership skills.<br>
+            I served as the student director of <strong>Computer Society of Anna University</strong> and conducted workshops in Natural language Processing and ML to freshermen and sophomores.<br>
+            After graduating and working for three years, I decided to get back to academics and pursue my Master of Computer Science from the <strong>University of Illinois, Urbana Champaign</strong>. The opportunity to learn from the classrooms of great professors and interact with passionate students has a lasting impact in my life.<br>
+            After finishing high school, I did my undergrad in <strong>College of Engineering Guindy, Chennai</strong> which is the oldest technical institution in India. Alongside technical education, I also got to work on my social, communication and leadership skills.<br>
+                I served as the student director of <strong>Computer Society of Anna University</strong> and conducted workshops in Natural language Processing and ML to freshermen and sophomores.<br>
+                After graduating and working for three years, I decided to get back to academics and pursue my Master of Computer Science from the <strong>University of Illinois, Urbana Champaign</strong>. The opportunity to learn from the classrooms of great professors and interact with passionate students has a lasting impact in my life.<br>
+                After finishing high school, I did my undergrad in <strong>College of Engineering Guindy, Chennai</strong> which is the oldest technical institution in India. Alongside technical education, I also got to work on my social, communication and leadership skills.<br>
+                I served as the student director of <strong>Computer Society of Anna University</strong> and conducted workshops in Natural language Processing and ML to freshermen and sophomores.<br>
+                After graduating and working for three years, I decided to get back to academics and pursue my Master of Computer Science from the <strong>University of Illinois, Urbana Champaign</strong>. The opportunity to learn from the classrooms of great professors and interact with passionate students has a lasting impact in my life.
+                After graduating and working for three years, I decided to get back to academics and pursue my Master of Computer Science from the <strong>University of Illinois, Urbana Champaign</strong>. The opportunity to learn from the classrooms of great professors and interact with passionate students has a lasting impact in my life.
+                After graduating and working for three years, I decided to get back to academics and pursue my Master of Computer Science from the <strong>University of Illinois, Urbana Champaign</strong>. The opportunity to learn from the classrooms of great professors and interact with passionate students has a lasting impact in my life.
+                fter graduating and working for three years, I decided to get back to academics and pursue my Master of Computer Science from the <strong>University of Illinois, Urbana Champaign</strong>. The opportunity to learn from the classrooms of great professors and interact with passionate students has a lasting impact in my life.
+            </p>
+            </section>
+        </section>
+    </section>
+        <footer id="footer">
+            <p>Thank you for visiting my portfolio! To connect with me in social media,</p>
+            <div class="social">
+                <a href="https://github.com/aarthy2000"><i class="fa fa-github"></i> <p>Github</p></a>
+                <a href="https://www.instagram.com/aarthy_sings/"><i class="fa fa-instagram"></i> <p>Instagram</p></a> 
+            <a href=" https://www.facebook.com/aarthy.kp "><i class="fa fa-facebook"></i> <p>Facebook</p></a>
+            <a href="https://www.linkedin.com/in/aarthy-padmanaban/"><i class="fa fa-linkedin"></i> <p>Linkedin</p></a>
+            </div>
+            
+        </footer>
     </body>
 </html>
