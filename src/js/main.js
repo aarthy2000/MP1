@@ -4,12 +4,10 @@ carousel();
 
 function plusSlides(i){
     index += i;
-    console.log(index);
     carousel();
 }
 
 function carousel(){
-    console.log("index is ",index);
     let slides = document.getElementsByClassName("carousel-slide");
     if(index >= slides.length){
         //loop to first again
@@ -71,7 +69,6 @@ function closeDialog(event){
 function moveToCarousel(event){
     let chosen = event.target.id;
     index = chosen;
-    console.log("index was chosen",index);
     carousel();
 }
 function clearActiveAnchors(){
@@ -89,11 +86,11 @@ function indicatePosition(){
 
     let scrollY = window.scrollY + (5/100)*window.innerHeight/2;
 
-    console.log("diff------");
+
     for(let section of sections){
         let top = section.offsetTop;
         let height = section.offsetHeight;
-        console.log(top, top+height, scrollY);
+
         if(top <= scrollY && scrollY <= top+height){
             let id = section.id;
             let id_a = `a[href='#${id}']`;
@@ -102,7 +99,6 @@ function indicatePosition(){
             // break;
         }
     }
-   
 
 }
 
@@ -134,3 +130,5 @@ let pages = document.querySelectorAll(".carousel input");
 pages[0].checked = true;
 
 document.getElementsByName("carousel_page").forEach(page => page.addEventListener("click",(event)=> moveToCarousel(event)));
+
+
