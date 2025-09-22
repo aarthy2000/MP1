@@ -113,8 +113,10 @@ footer{
 footer > p{
   margin-bottom: 30px;
 }
-.content{
+.content section{
   width: 100%;
+  scroll-margin-top: 3em;
+
 }
 .content section:nth-child(2n+1){
   background-color: var(--color_1);
@@ -223,7 +225,11 @@ dialog{
 .carousel{
   text-align: center;
   position: relative;
-  margin:auto;
+  display: inline-block;
+}
+.carousel_wrapper{
+  justify-content: center;
+  display: flex;
 }
 .carousel-slide{
   width: 100%;
@@ -233,8 +239,8 @@ dialog{
 .carousel-image{
   width: 640px;
   height: 640px;
-  animation: enlarge 2s ;
-
+  animation: rotate 2s ;
+  display: block;
 }
 .carousel-caption{
   color: var(--color_1);
@@ -243,10 +249,8 @@ dialog{
   color: var(--color_1);
   accent-color: var(--color_1);
 }
-@keyframes enlarge {
-  0% { transform: scale(1)}
-  50% { transform: scale(1.05)}
-  100% { transform: scale(1)}
+@keyframes rotate {
+  50% { transform: rotate(0.5turn)}
 }
 
 
@@ -261,16 +265,17 @@ dialog{
   padding: 10px;
   cursor: pointer;
   border-radius: 50%;
+  z-index:10;
 }
 
 .prev:hover, .next:hover {
   background-color: var(--color_1);
 }
 .prev{
-  left:30%;
+  left:10px;
 }
 .next{
-  right: 30%;
+  right: 10px;
 }
 .carousel-caption {
   margin-top: 10px;
